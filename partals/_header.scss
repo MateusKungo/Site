@@ -1,0 +1,102 @@
+header{
+    width: 100%;
+    height: 600px;
+
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+body{
+    overflow-x: hidden;
+}
+
+.header-icons a{
+    color: $white-normal;
+    font-size: 1.4rem;
+    
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;
+}
+
+.header-icons a:hover{
+   color: $red-light;
+   animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: transparent;
+    transition: background-color 0.8s;
+    color: $white-normal;
+}
+.header-button:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.header-logo h4{
+    color: $white-normal;
+    font-size: 2rem;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+.header-logo h4 span{
+    color: blue;
+    padding: .3rem;
+    font-size: 2rem;
+    background-color: $white-normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and  (max-width: 768px){
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+    }
+    .header-logo h4{
+        width:160px;
+        font-size: 2rem;
+        color: $white-normal;
+        margin-top: 20px;
+    }
+    .header-button{
+        display: none;
+    }
+    .header-icons a{
+        margin-top: 20px;
+        font-size: 3rem;
+
+    }
+}
